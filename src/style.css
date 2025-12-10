@@ -1,0 +1,347 @@
+.main {
+  padding: 25px;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  min-height: 250px;
+  text-align: center;
+}
+
+.header {
+  background: #179b1b;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  background: #ffafcc;
+  text-align: center;
+  padding: 12px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+  max-height: 100%;
+}
+
+.layout {
+  max-width: 600px;
+  margin: auto;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  background: black;
+  box-shadow: 0px 4px 10px rgba(18, 18, 223, 0.15);
+}
+
+.nav-link {
+  margin: 0 8px;
+}
+
+.button {
+  margin: 0 8px;
+}
+
+.overdue {
+  color: #b00020;
+  font-weight: 700;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-main {
+  text-align: left;
+}
+.todo-meta small {
+  display: block;
+  color: #666;
+  font-size: 0.8em;
+}
+.todo-actions button {
+  margin-left: 6px;
+}
+
+.edit-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.edit-left {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.edit-right {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+.edit-text {
+  flex: 1 1 220px;
+  min-width: 140px;
+}
+.edit-deadline {
+  flex: 0 0 220px;
+}
+.save-btn {
+  background: #eaf8ea;
+  border-color: #c8e6c9;
+}
+.cancel-btn {
+  background: #ffecec;
+  border-color: #f5c6cb;
+}
+
+/* Layout improvements for Todo list */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+}
+.todo-row {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-main {
+  flex: 1 1 auto;
+  text-align: left;
+}
+.todo-text {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.todo-meta small {
+  display: block;
+  margin: 0 0 6px 0;
+  color: #666;
+  font-size: 0.85em;
+}
+.todo-meta .created {
+  margin-bottom: 4px;
+}
+.todo-meta .deadline {
+  margin-bottom: 0;
+}
+.todo-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.form-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+form input[type="text"], form input[type="datetime-local"], form select, .edit-row input[type="text"] {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+form input[type="datetime-local"], form select, .edit-row input[type="datetime-local"] {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  background: #fff;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Emoji buttons for actions */
+.emoji-btn {
+  font-size: 1.1em;
+  padding: 6px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.done-btn {
+  color: #0b6623; /* dark green */
+}
+.remove-btn {
+  color: #b00020; /* red */
+}
+
+.edit-btn {
+  color: #0b5fff; /* blue */
+}
+
+/* Priority styling */
+.priority-badge {
+  display: inline-block;
+  margin-right: 6px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.overdue-icon {
+  margin-right: 6px;
+  font-size: 1.1em;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.priority-high .priority-badge {
+  background-color: #ffebee;
+  color: #b00020;
+}
+
+.priority-medium .priority-badge {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.priority-low .priority-badge {
+  background-color: #e8f5e9;
+  color: #0b6623;
+}
+
+/* Priority row styling */
+li.priority-high {
+  border-left: 4px solid #b00020;
+  background-color: #fff5f5;
+}
+
+li.priority-high .todo-text {
+  font-weight: 600;
+  color: #333;
+}
+
+li.priority-medium {
+  border-left: 4px solid #e65100;
+  background-color: #fffbf5;
+}
+
+li.priority-medium .todo-text {
+  font-weight: 500;
+  color: #333;
+}
+
+li.priority-low {
+  border-left: 4px solid #0b6623;
+  background-color: #f5f5f5;
+}
+
+/* Overdue styling */
+li.overdue {
+  border-left-color: #b00020 !important;
+  background-color: #ffe0e0 !important;
+}
+
+li.overdue .todo-text {
+  color: #b00020;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Filter buttons */
+.filter-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.filter-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #f0f0f0;
+}
+
+.filter-btn.active {
+  font-weight: 700;
+  border-color: #333;
+  background: #333;
+  color: #fff;
+}
+
+.filter-btn.priority-low.active {
+  background: #0b6623;
+  border-color: #0b6623;
+  color: #fff;
+}
+
+.filter-btn.priority-medium.active {
+  background: #e65100;
+  border-color: #e65100;
+  color: #fff;
+}
+
+.filter-btn.priority-high.active {
+  background: #b00020;
+  border-color: #b00020;
+  color: #fff;
+}
+
+/* Completed task styling */
+li.priority-high,
+li.priority-medium,
+li.priority-low {
+  position: relative;
+}
+
+/* Make completed tasks visually distinct */
+.completed-text {
+  text-decoration: line-through;
+  opacity: 0.7;
+  color: #666;
+}
+
+.edit-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.edit-row input[type="text"] {
+  min-width: 240px;
+}
+.edit-row input[type="datetime-local"] {
+  min-width: 200px;
+}
+
+/* Visual cue for overdue todo */
+.overdue .todo-text {
+  color: #b00020;
+  font-weight: 700;
+}
